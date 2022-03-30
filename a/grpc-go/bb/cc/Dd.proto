@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package bb.cc;
+
+option go_package="github.com/rainggo/test20220330/a/grpc-go/bb/cc";
+
+
+service Dd {
+    rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+
+message HelloRequest {
+    string msg = 1;
+}
+message HelloReply {
+    string msg = 1;
+    string code = 2;
+}
